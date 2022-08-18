@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Space Travel</title>
+    <link rel="stylesheet" href="/css/reset-css.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header th:fragment="nav" id="nheader">
+    <nav class="navbarrr">
+        <div class="brand-title">Space Travel</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+
+        <div class="navbar-links">
+            <ul>
+                <li class="active"><a href="/">Home</a></li>
+                <li sec:authorize="isAnonymous()"><a href="/register">Register</a></li>
+                <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+                <li sec:authorize="hasRole('USER')"><a href="/users">Users</a></li>
+                <li sec:authorize="hasRole('ADMIN')"><a href="/admins">Admins</a></li>
+                <li><a href="/about">About</a></li>
+                <li sec:authorize="isAuthenticated()">
+                <form th:action="@{/logout}" th:method="post">
+                    <button class="btn btn-danger" type="submit">Logout</button>
+                </form>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<footer th:fragment="footer" class="container text-white">
+    <p>&copy;Casho 2022. All rights reserved.</p>
+</footer>
+</body>

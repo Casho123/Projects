@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<header th:replace="fragments/commons::nav">
+
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
+<div class="margincont"></div>
+<body id="ibody">
+<div class="container" id="index">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Space Travel</h1>
+            <p>Travel to other galaxies. Visit planets and black holes with a ship. Discover original music!</p>
+        </div>
+        <div class="col-lg-12">
+            <div class="card card1">
+                <h5>Andromeda</h5>
+            </div>
+            <div class="card card2">
+                <h5>NGC-1300</h5>
+            </div>
+            <div class="card card3">
+                <h5>Eye Of Sauron</h5>
+            </div>
+            <div class="card card4">
+                <h5>Malin-1</h5>
+            </div>
+        </div>
+    </div>
+
+</div>
+<footer th:replace="fragments/commons::footer">
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<header th:replace="fragments/commons2::navv">
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+
+</script>
+<body id="adminbody">
+
+</body>
+
+</html>

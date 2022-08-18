@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<header th:replace="fragments/commons2::navv">
+
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+
+</script>
+<body id="pvisualbody" onload="slider()">
+<div class="bannerp">
+  <div class="sliderp">
+    <img src="/images/bhole1.png" id="slideimgbh">
+  </div>
+  <div class="overlayp">
+    <div class="contentp">
+      <h1>Congratulations, you've reached a new planet! Play some music now.</h1>
+      <audio controls autoplay loop>
+        <source src="/images/first.wav" type="audio/wav">
+      </audio>
+<!--      <input type="button" value="sound" onclick="playMusic()" />-->
+    </div>
+  </div>
+</div>
+
+<script>
+    var slideImg = document.getElementById("slideimgbh");
+    var images = new Array(
+    "/images/Planets/planet 1.JPG",
+
+    "/images/Planets/planet3.PNG",
+
+    "/images/Planets/planet 5.JPG",
+
+    "/images/Planets/planet 7.JPG",
+    "/images/Planets/p1.PNG"
+
+    );
+    var len = images.length;
+    var i = 0;
+    function slider() {
+        if (i > len-1) {
+            i = 0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()', 5000);
+    }
+
+    function playMusic(){
+    var music = new Audio('/images/bhspace1.wav');
+    music.play();
+  }
+
+</script>
+</body>
+
+
+</html>

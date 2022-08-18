@@ -1,0 +1,1024 @@
+body {
+    background-image: url(/images/spacepic.JPG);
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+
+}
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.jumbotron{
+    background-color: rgba(0,0,0,0.1);
+    min-height: 90vh;
+}
+
+.bg-blur {
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/opacity/see-through */
+}
+
+
+.navbari{
+    height:12%;
+    display:flex;
+    align-items:center;
+}
+nav1{
+    flex:1;
+    text-align:right;
+}
+
+nav1 ul li {
+    list-style:none;
+    display:inline-block;
+    margin-right:60px;
+}
+nav1 ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+.row{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+.col {
+    flex-basis: 50%;
+}
+h1 {
+    color: #fff;
+    font-size: 120px;
+    text-shadow: 0 0 5px #999;
+}
+p {
+    color: #fff;
+    font-size: 15px;
+    line-height: -15px;
+    text-shadow: 0 0 5px #999;
+}
+.card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 30px 30px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+h5 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.card1 {
+    background-image: url(/images/andromeda.JPG);
+}
+.card2 {
+    background-image: url(/images/ngc.JPG);
+}
+.card3 {
+    background-image: url(/images/sauron.JPG);
+}
+.card4 {
+    background-image: url(/images/malin.JPG);
+}
+.card:hover{
+    transform: translateY(-10px);
+}
+.card p{
+    text-shadow: 0 0 15px #000;
+    font-size: 12px;
+
+}
+.container {
+    position: center;
+}
+
+/*   START OF REGISTER CSS    */
+
+.container#rcontainer {
+     max-width:600px;
+     width: 100%;
+     background: linear-gradient(135deg, #87CEFA, #483D8B);
+     padding: 25px 30px;
+     border-radius: 5px;
+
+}
+.container#cont {
+     max-width:600px;
+     width: 100%;
+     background: linear-gradient(135deg, #87CEFA, #483D8B);
+     padding: 25px 30px;
+     border-radius: 5px;
+
+}
+
+.container#rcontainer .title {
+    font-size:25px;
+    font-weight: 500;
+    position:relative;
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer .title::before {
+    content: '';
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #483D8B, #87CEFA);
+}
+.container#rcontainer form .user-details {
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer form .user-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.container#rcontainer form .user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16 px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#rcontainer form .user-details .input-box .details {
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.container#rcontainer form .user-details .input-box input:focus,
+.container#rcontainer form .user-details .input-box input:valid {
+    border-color: #483D8B;
+}
+.container#rcontainer form .button{
+
+    margin: 45px 0;
+    margin-bottom: 20px;
+}
+.container#rcontainer form .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #191970, #4169E1);
+    padding: 20px;
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer form .button input:hover {
+    background: linear-gradient(135deg, #4169E1, #191970);
+
+}
+
+/* about page below */
+.container#rcontainer h3 {
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer p {
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer .button{
+
+    margin: 45px 0;
+    margin-bottom: 20px;
+}
+.container#rcontainer  .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #191970, #4169E1);
+    padding: 20px;
+    text-shadow: 0 0 5px #999;
+}
+.container#rcontainer  .button input:hover {
+    background: linear-gradient(135deg, #4169E1, #191970);
+
+}
+
+/* blackhole below */
+
+
+.container#bhcontainer {
+     max-width:600px;
+     width:100%;
+     background: linear-gradient(135deg, #99ff99, #00cc00);
+     padding: 25px 30px;
+     border-radius: 5px;
+
+}
+.container#bhcontainer .title {
+    font-size:25px;
+    font-weight: 500;
+    position:relative;
+    text-shadow: 0 0 5px #999;
+    color: black;
+}
+.container#bhcontainer .title::before {
+    content: '';
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg, #00cc00, #99ff99);
+}
+.container#bhcontainer form .user-details {
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-shadow: 0 0 5px #999;
+    color: black;
+}
+.container#bhcontainer form .user-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.container#bhcontainer form .user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#bhcontainer form .user-details .input-box select {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+
+::placeholder {
+    color: black;
+}
+
+.container#bhcontainer form .user-details .input-box .details {
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.container#bhcontainer form .user-details .input-box input:focus,
+.container#bhcontainer form .user-details .input-box input:valid {
+    border-color: #330000;
+}
+.container#bhcontainer form .user-details .input-box select:focus,
+.container#bhcontainer form .user-details .input-box select:valid {
+    border-color: #330000;
+}
+
+.container#bhcontainer form .button{
+
+    margin: 45px 0;
+    margin-bottom: 20px;
+}
+.container#bhcontainer .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #004d00, #4dff4d);
+    padding: 20px;
+    text-shadow: 0 0 5px #999;
+}
+.container#bhcontainer .button input:hover {
+    background: linear-gradient(135deg, #4dff4d, #004d00);
+}
+.card-bh {
+    width: 700px;
+    height: 550px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    background-image: url(/images/bhole1.png);
+}
+.card-bh:hover{
+    transform: translateY(-10px);
+}
+
+
+/* planet */
+
+.container#pcontainer {
+     max-width:600px;
+     width:100%;
+     background: linear-gradient(135deg, #ccffee, #009966);
+     padding: 25px 30px;
+     border-radius: 5px;
+
+}
+.container#pcontainer .title {
+    font-size:25px;
+    font-weight: 500;
+    position:relative;
+    text-shadow: 0 0 5px #999;
+}
+.container#pcontainer .title::before {
+    content: '';
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,  #009966, #ccffee);
+}
+.container#pcontainer form .user-details {
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-shadow: 0 0 5px #999;
+}
+.container#pcontainer form .user-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.container#pcontainer form .user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16 px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#pcontainer form .user-details .input-box select {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16 px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#pcontainer form .user-details .input-box .details {
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.container#pcontainer form .user-details .input-box input:focus,
+.container#pcontainer form .user-details .input-box input:valid {
+    border-color: #003322;
+}
+.container#pcontainer form .user-details .input-box select:focus,
+.container#pcontainer form .user-details .input-box select:valid {
+    border-color: #003322;
+}
+.container#pcontainer form .button{
+
+    margin: 45px 0;
+    margin-bottom: 20px;
+}
+.container#pcontainer .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #003322, #00ffaa);
+    padding: 20px;
+    text-shadow: 0 0 5px #999;
+}
+.container#pcontainer .button input:hover {
+    background: linear-gradient(135deg, #00ffaa, #003322);
+}
+.card-p {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    background-image: url(/images/earth.png);
+}
+.card-p:hover{
+    transform: translateY(-10px);
+}
+
+/* card pp and pbh */
+.card-pp {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    background-image: url(/images/takeoff1.PNG);
+}
+.card-pp:hover{
+    transform: translateY(-10px);
+}
+.card-pbh {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    background-image: url(/images/takeoff2.PNG);
+}
+.card-pbh:hover{
+    transform: translateY(-10px);
+}
+
+
+/* ship page */
+
+.container#scontainer {
+     max-width:600px;
+     width:100%;
+     background: linear-gradient(135deg, #dd99ff, #7700b3);
+     padding: 25px 30px;
+     border-radius: 5px;
+
+}
+.container#scontainer .title {
+    font-size:25px;
+    font-weight: 500;
+    position:relative;
+    text-shadow: 0 0 5px #999;
+}
+.container#scontainer .title::before {
+    content: '';
+    position:absolute;
+    left:0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background: linear-gradient(135deg,  #7700b3, #dd99ff);
+}
+.container#scontainer form .user-details {
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-shadow: 0 0 5px #999;
+}
+.container#scontainer form .user-details .input-box {
+    margin: 20px 0 12px 0;
+    width: calc(100% / 2 - 20px);
+}
+.container#scontainer form .user-details .input-box input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16 px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#scontainer form .user-details .input-box select {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16 px;
+    border-bottom-width: 3px;
+    transition: all 0.4s ease;
+}
+.container#scontainer form .user-details .input-box .details {
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.container#scontainer form .user-details .input-box input:focus,
+.container#scontainer form .user-details .input-box input:valid {
+    border-color: #7700b3;
+}
+.container#scontainer form .user-details .input-box select:focus,
+.container#scontainer form .user-details .input-box select:valid {
+    border-color: #7700b3;
+}
+.container#scontainer form .button{
+
+    margin: 45px 0;
+    margin-bottom: 20px;
+}
+.container#scontainer .button input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #220033, #b31aff);
+    padding: 20px;
+    text-shadow: 0 0 5px #999;
+}
+.container#scontainer .button input:hover {
+    background: linear-gradient(135deg, #b31aff, #220033);
+}
+.card-s {
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    background-image: url(/images/nostromo1.PNG);
+}
+.card-s:hover{
+    transform: translateY(-10px);
+}
+
+/* black hole visual */
+.bannerbh {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.sliderbh {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    animation: change 5s infinite ease-in-out;
+}
+#slideimgbh {
+    width: 100%;
+    height: 100%;
+}
+
+.overlaybh {
+    width: 100%;
+    height: 100vh;
+   /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
+    position: absolute;
+    top: 0;
+}
+.contentbh {
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+
+}
+.contentbh h1 {
+    font-size: 60px;
+}
+
+@keyframes change {
+
+    0% {
+    sliderbh: url(/images/bhole1.png)
+    }
+    25% {
+    sliderbh: url(/images/bhole2.jpg)
+     }
+     50% {
+     sliderbh: url(/images/bhole3.png)
+      }
+     75% {
+     sliderbh: url(/images/bhole4.png)
+      }
+}
+
+/* PLANET VISUAL */
+
+.bannerp {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.sliderp {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+#slideimgp {
+    width: 100%;
+    height: 100%;
+}
+
+.overlayp{
+    width: 100%;
+    height: 100vh;
+ /*   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)); */
+    position: absolute;
+    top: 0;
+}
+.contentp {
+    width: 60%;
+    margin: 160px auto 0;
+    text-align: center;
+
+}
+.contentp h1 {
+    font-size: 60px;
+}
+
+/* navbar
+
+nav#navv {
+    background: linear-gradient(135deg, #87CEFA, #483D8B);
+    height: 80px;
+    width: 100%;
+}
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 50px;
+    font-weight: bold;
+}
+nav#navv ul {
+    float: right;
+    margin-right: 20px;
+}
+nav#navv ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav#navv ul li a {
+    color:white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+
+}
+nav#navv ul li a.active,a:hover {
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-height: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+}
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+
+    }
+    nav#navv ul li a {
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+    }
+    nav#navv ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav#navv ul li {
+        display: block;
+    }
+    nav#navv ul li a{
+        font-size: 20px;
+    }
+    nav#navv ul li a:hover,a.active {
+        background: none;
+        color: 0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+
+    }
+}
+ */
+  /* navbaaaaar */
+
+a {
+    color: #f2f2f2;
+    text-shadow: 0 0 5px #999;
+
+}
+a:hover {
+    color: #cc5200;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto", sans-serif;
+}
+
+#header {
+    background: linear-gradient(135deg,#87CEFA,#483D8B);
+    padding: 15px;
+}
+#header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+#header .logo a {
+    color: #fff;
+
+}
+
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu > ul {
+    display: flex;
+}
+.nav-menu > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 10px 0 10px 22px;
+}
+.nav-menu a {
+    display: block;
+    position: relative;
+    transition: 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Roboto", sans-serif;
+    padding: 0 4px;
+    text-transform: uppercase;
+}
+.nav-menu > ul > li a::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: #662900;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out;
+}
+.nav-menu a:hover::before,
+.nav-menu li:hover > a::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    top: 18px;
+    right: 15px;
+    z-index: 9998;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+
+}
+.mobile-nav-toggle i {
+    color: #fff;
+}
+.mobile-nav {
+    position: fixed;
+    top: 55px;
+    left: 15px;
+    bottom: 15px;
+    z-index: 9999;
+    overflow-y: auto;
+    background: #fff;
+    transition: ease-in-out 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+.margincont {
+    margin: 60px;
+}
+
+#index h1 {
+    text-align: center
+
+}
+#index p {
+    text-align: center
+}
+.containerbh {
+    display: block;
+
+}
+
+.containerbh audio {
+    padding-top: 25px;
+    display: block;
+}
+
+/* last navbarrr */
+#nbody {
+    margin: 0;
+    padding: 0;
+}
+
+.navbarrr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg,#87CEFA,#483D8B);
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    padding-left: 30px;
+    text-shadow: 0 0 5px #999;
+
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-right: 30px;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+.navbar-links li a {
+    padding: 1rem;
+    display: block;
+}
+.navbar-links li button {
+    padding: 1rem;
+    display: block;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+@media (max-width:728px) {
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbarrr {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+
+
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+
+    }
+    .navbar-links li button {
+        padding: .5rem 1rem;
+        display: flex;
+
+        width: 100%;
+
+
+
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+/* users */
+#ubody {
+    background-image: url(/images/earth-2.PNG);
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+
+}
+
+#adminbody {
+    background-image: url(/images/earth-1.PNG);
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+
+}
+.navbarrr button {
+    display: flex;
+    justify-content: center;
+
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+
+</head>
+<header th:replace="fragments/commons2::navv">
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+</script>
+<div class="margincont"></div>
+<body id="sbody">
+<div class="container" id="index">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="container" id="scontainer">
+                <div class="title">Create A Ship</div>
+                <form th:action="@{/add/ship}"
+                      th:method="post"
+                      th:object="${shipDTO}">
+                    <div class="user-details">
+                    <div class="input-box">
+                        <label for="name" class="details">Name</label>
+                    </div>
+                    <input
+                            id="name"
+                            th:field="*{name}"
+                            th:errorclass="bg-danger"
+                            class="form-control"
+                            type="text"
+                            placeholder="Enter the name"/>
+                    <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></small>
+                    <div class="input-box">
+                        <label for="speedInLightYears" class="details">Speed In Light Years</label>
+                    </div>
+                    <input
+                            id="speedInLightYears"
+                            th:field="*{speedInLightYears}"
+                            th:errorclass="bg-danger"
+                            class="form-control"
+                            type="number"
+                            placeholder="Enter the speed"/>
+                    <small th:if="${#fields.hasErrors('speedInLightYears')}" th:errors="*{speedInLightYears}"
+                           class="text-danger"></small>
+                    <div class="input-box">
+                        <label for="length" class="details">Length</label>
+                    </div>
+                    <input
+                            id="length"
+                            th:field="*{length}"
+                            th:errorclass="bg-danger"
+                            class="form-control"
+                            type="number"
+                            placeholder="Enter the length"/>
+                    <small th:if="${#fields.hasErrors('length')}" th:errors="*{length}"
+                           class="text-danger"></small>
+                    <div class="input-box">
+                        <label for="shipModel" class="details">Ship Model</label>
+                    </div>
+                    <select th:field="*{shipModel}"
+                            th:errorclass="bg-danger"
+                            class="browser-default custom-select" id="shipModel" name="shipModel">
+                        <option value="">Choose the ship model</option>
+                        <option th:each="m : ${T(bg.softuni.space.model.entity.enums.ShipModelEnum).values()}"
+                                th:text="${m}" th:value="${m}"
+                                value="">Nostromo</option>
+                    </select>
+                    <small th:if="${#fields.hasErrors('shipModel')}" th:errors="*{shipModel}"
+                           class="text-danger">
+                    </small>
+                    </div>
+
+                    <div class="button">
+                        <input type="submit" value="Create">
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-s">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<footer th:replace="fragments/commons::footer">
+</footer>
+</html>

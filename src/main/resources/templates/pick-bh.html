@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+
+</head>
+<header th:replace="fragments/commons2::navv">
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+
+</script>
+<div class="margincont"></div>
+<body>
+<div class="container" id="index">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="container" id="bhcontainer">
+                <div class="title">Black hole travel</div>
+                <form th:action="@{/pick/blackhole}"
+                th:method="post"
+                th:object="${pickBlackHoleDTO}">
+                    <div class="user-details">
+
+                        <div class="input-box">
+                            <label class="details">Pick your ship</label>
+                        </div>
+                        <select class="browser-default custom-select" th:field="*{shipId}">
+                            <option value="0">Choose a ship</option>
+                            <option th:each="ship: ${ships}" th:value="${ship.getId()}"
+                                    th:text="${ship.getName()} "></option>
+                        </select>
+                        <div class="input-box">
+                            <label class="details">Pick your destination</label>
+                        </div>
+                        <select class="browser-default custom-select" th:field="*{blackHoleId}">
+                            <option value="0">Choose a Black hole</option>
+                            <option th:each="blackHole: ${blackHoles}" th:value="${blackHole.getId()}"
+                                    th:text="${blackHole.getName()} "></option>
+                        </select>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Travel">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card-pbh">
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+</body>
+<footer th:replace="fragments/commons::footer">
+</footer>
+</html>

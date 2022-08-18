@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<header th:replace="fragments/commons2::navv">
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+
+</script>
+<body id="bhvisualbody" onload="slider()">
+<div class="bannerbh">
+    <div class="sliderbh">
+        <img src="/images/bhole1.png" id="slideimgbh">
+    </div>
+    <div class="overlaybh">
+        <div class="contentbh">
+            <h1>Your ship has been destroyed and you must create a new one, but you can play some music now.</h1>
+            <audio controls autoplay loop>
+                <source src="/images/bhspace1.wav" type="audio/wav">
+            </audio>
+            <audio controls autoplay loop>
+                <source src="/images/spacecowboy.wav" type="audio/wav">
+            </audio>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    var slideImg = document.getElementById("slideimgbh");
+    var images = new Array(
+    "/images/bhole1.png",
+    "/images/bhole3.png",
+    "/images/bh5.PNG",
+    "/images/bh6.PNG"
+    );
+    var len = images.length;
+    var i = 0;
+    function slider() {
+        if (i > len-1) {
+            i = 0;
+        }
+        slideImg.src = images[i];
+        i++;
+        setTimeout('slider()', 5000);
+    }
+
+    function playMusic(){
+    var music = new Audio('/images/bhspace1.wav');
+    music.play();
+  }
+
+</script>
+
+</body>
+</html>

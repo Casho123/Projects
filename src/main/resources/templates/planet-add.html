@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/commons::head">
+</head>
+<header th:replace="fragments/commons2::navv">
+</header>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+    toggleButton.addEventListener('click',() => {
+        navbarLinks.classList.toggle('active')
+    })
+
+</script>
+<div class="margincont"></div>
+<body id="pbody">
+<div class="container" id="index">
+
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="container" id="pcontainer">
+        <div class="title">Create A Planet</div>
+        <form th:action="@{/add/planet}"
+              th:method="post"
+              th:object="${planetDTO}">
+          <div class="user-details">
+            <div class="input-box">
+              <label for="name" class="details">Name</label>
+            </div>
+            <input
+                    id="name"
+                    th:field="*{name}"
+                    th:errorclass="bg-danger"
+                    class="form-control"
+                    type="text"
+                    placeholder="Enter the name"/>
+            <small th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="text-danger"></small>
+            <div class="input-box">
+              <label for="age" class="details">Age</label>
+            </div>
+            <input
+                    id="age"
+                    th:field="*{age}"
+                    th:errorclass="bg-danger"
+                    class="form-control"
+                    type="number"
+                    placeholder="Enter the age"/>
+            <small th:if="${#fields.hasErrors('age')}" th:errors="*{age}" class="text-danger"></small>
+            <div class="input-box">
+              <label for="temperature" class="details">Temperature</label>
+            </div>
+            <input
+                    id="temperature"
+                    th:field="*{temperature}"
+                    th:errorclass="bg-danger"
+                    class="form-control"
+                    type="number"
+                    placeholder="Enter the temperature"/>
+            <small th:if="${#fields.hasErrors('temperature')}" th:errors="*{temperature}" class="text-danger"></small>
+            <div class="input-box">
+              <label for="galaxy" class="details">Galaxy</label>
+            </div>
+            <select th:field="*{galaxy}"
+                    th:errorclass="bg-danger"
+                    class="browser-default custom-select"
+                    id="galaxy" name="galaxy">
+              <option value="">Choose the galaxy</option>
+              <option value="Andromeda">Andromeda</option>
+              <option value="NGC-1300">NGC-1300</option>
+              <option value="Malin-1">Malin-1</option>
+              <option value="Eye of Sauron">Eye Of Sauron</option>
+            </select>
+            <small th:if="${#fields.hasErrors('galaxy')}" th:errors="*{galaxy}"
+                   class="text-danger">
+            </small>
+          </div>
+          <div class="button">
+            <input type="submit" value="Create">
+          </div>
+        </form>
+
+
+      </div>
+
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <div class="card-p">
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+<footer th:replace="fragments/commons::footer">
+
+</footer>
+</html>
