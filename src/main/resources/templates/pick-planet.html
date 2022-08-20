@@ -31,20 +31,23 @@
                         <div class="input-box">
                             <label class="details">Pick your ship</label>
                         </div>
-                        <select class="browser-default custom-select" th:field="*{shipId}">
+                        <select th:errorclass="bg-danger"
+                                class="browser-default custom-select" th:field="*{shipId}">
                             <option value="0">Choose a ship</option>
                             <option th:each="ship: ${ships}" th:value="${ship.getId()}"
                                     th:text="${ship.getName()} "></option>
-
                         </select>
+                        <small th:if="${#fields.hasErrors('shipId')}" th:errors="*{shipId}" class="text-danger"></small>
                         <div class="input-box">
                             <label class="details">Pick your destination</label>
                         </div>
-                        <select class="browser-default custom-select" th:field="*{planetId}">
+                        <select th:errorclass="bg-danger"
+                                class="browser-default custom-select" th:field="*{planetId}">
                             <option value="0">Choose a planet</option>
                             <option th:each="planet: ${planets}" th:value="${planet.getId()}"
                                     th:text="${planet.getName()} "></option>
                         </select>
+                        <small th:if="${#fields.hasErrors('planetId')}" th:errors="*{planetId}" class="text-danger"></small>
                     </div>
                     <div class="button">
                         <input type="submit" value="Travel">

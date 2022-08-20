@@ -36,12 +36,16 @@ public class UserController {
     public String register(@Valid UserRegistrationDTO userRegistrationDTO,
                            BindingResult bindingResult,
                            RedirectAttributes redirectAttributes) {
-        if (bindingResult.hasErrors() || !this.userService.register(userRegistrationDTO)) {
+        if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("userRegistrationDTO", userRegistrationDTO);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.userRegistrationDTO",
                     bindingResult);
 
-
+            return "redirect:register";
+        }
+        if (!this.userService.register(userRegistrationDTO)) {
+            redirectAttributes.addFlashAttribute("userRegistrationDTO", userRegistrationDTO);
+            redirectAttributes.addFlashAttribute("already_taken", true);
             return "redirect:register";
         }
 

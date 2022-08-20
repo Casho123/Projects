@@ -26,6 +26,9 @@
                         th:action="@{/add/blackhole}"
                         th:method="post"
                         th:object="${blackHoleDTO}">
+                    <p th:if="${bad_name}" class="errors alert alert-danger">
+                        Black hole name already taken!
+                    </p>
                     <div class="user-details">
                         <div class="input-box">
                             <label for="name" class="details">Name</label>

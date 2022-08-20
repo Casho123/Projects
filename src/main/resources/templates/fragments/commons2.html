@@ -20,6 +20,8 @@
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
+        <div sec:authorize="isAuthenticated()" class="text-white" >Welcome, <th:block th:text="${#authentication.principal.getUsername()}">X</th:block>!</div>
+
         <div class="navbar-links">
             <ul>
                 <li class="active"><a href="/">Home</a></li>

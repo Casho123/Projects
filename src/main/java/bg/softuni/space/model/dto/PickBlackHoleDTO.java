@@ -4,10 +4,10 @@ import javax.validation.constraints.Positive;
 
 public class PickBlackHoleDTO {
 
-    @Positive
+    @Positive(message = "You must choose a ship.")
     private Long shipId;
 
-    @Positive
+    @Positive(message = "You must choose a black hole.")
     private Long blackHoleId;
 
     public PickBlackHoleDTO() {

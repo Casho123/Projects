@@ -24,6 +24,9 @@
                 <form th:action="@{/add/ship}"
                       th:method="post"
                       th:object="${shipDTO}">
+                    <p th:if="${bad_ship}" class="errors alert alert-danger">
+                        Ship name has already been taken!
+                    </p>
                     <div class="user-details">
                     <div class="input-box">
                         <label for="name" class="details">Name</label>

@@ -39,10 +39,17 @@ public class ShipController {
                           RedirectAttributes redirectAttributes,
                           @AuthenticationPrincipal UserDetails userDetails) {
 
-        if (bindingResult.hasErrors() || !this.shipService.addShip(shipDTO, userDetails)) {
+        if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("shipDTO", shipDTO);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.shipDTO",
                     bindingResult);
+
+            return "redirect:/add/ship";
+        }
+        if (!this.shipService.addShip(shipDTO, userDetails)) {
+            redirectAttributes.addFlashAttribute("shipDTO", shipDTO);
+            redirectAttributes.addFlashAttribute("bad_ship",
+                    true);
 
             return "redirect:/add/ship";
         }

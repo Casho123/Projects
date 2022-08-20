@@ -25,6 +25,9 @@
         <form th:action="@{/add/planet}"
               th:method="post"
               th:object="${planetDTO}">
+          <p th:if="${bad_name_planet}" class="errors alert alert-danger">
+           Planet name already taken!
+          </p>
           <div class="user-details">
             <div class="input-box">
               <label for="name" class="details">Name</label>

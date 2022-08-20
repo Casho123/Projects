@@ -35,11 +35,17 @@ public class BlackHoleController {
     public String blackHole(@Valid CreateBlackHoleDTO blackHoleDTO,
                             BindingResult bindingResult,
                             RedirectAttributes redirectAttributes) {
-        if (bindingResult.hasErrors() || !this.blackHoleService.save(blackHoleDTO)) {
+        if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("blackHoleDTO", blackHoleDTO);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.blackHoleDTO",
                     bindingResult);
 
+            return "redirect:/add/blackhole";
+        }
+        if (!this.blackHoleService.save(blackHoleDTO)) {
+            redirectAttributes.addFlashAttribute("blackHoleDTO", blackHoleDTO);
+            redirectAttributes.addFlashAttribute("bad_name",
+                    true);
             return "redirect:/add/blackhole";
         }
 

@@ -35,10 +35,17 @@ public class PlanetController {
     public String planet(@Valid CreatePlanetDTO planetDTO,
                          BindingResult bindingResult,
                          RedirectAttributes redirectAttributes) {
-        if (bindingResult.hasErrors() || !this.planetService.save(planetDTO)) {
+        if (bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("planetDTO", planetDTO);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.planetDTO",
                     bindingResult);
+
+            return "redirect:/add/planet";
+        }
+        if (!this.planetService.save(planetDTO)) {
+            redirectAttributes.addFlashAttribute("planetDTO", planetDTO);
+            redirectAttributes.addFlashAttribute("bad_name_planet",
+                    true);
 
             return "redirect:/add/planet";
         }

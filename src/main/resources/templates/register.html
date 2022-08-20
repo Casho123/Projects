@@ -25,6 +25,9 @@
             th:action="@{/register}"
             th:method="post"
             th:object="${userRegistrationDTO}">
+        <p th:if="${already_taken}" class="errors alert alert-danger">
+            Username or email already taken, or passwords do not match!
+        </p>
         <div class="user-details">
             <div class="input-box">
                 <label for="name" class="details">Name</label>
