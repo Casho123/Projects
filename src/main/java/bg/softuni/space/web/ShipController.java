@@ -46,7 +46,7 @@ public class ShipController {
 
             return "redirect:/add/ship";
         }
-        if (!this.shipService.addShip(shipDTO, userDetails)) {
+        if (!this.shipService.addShip(shipDTO)) {
             redirectAttributes.addFlashAttribute("shipDTO", shipDTO);
             redirectAttributes.addFlashAttribute("bad_ship",
                     true);

@@ -27,6 +27,7 @@
                 <li class="active"><a href="/">Home</a></li>
                 <li sec:authorize="isAnonymous()"><a href="/register">Register</a></li>
                 <li sec:authorize="isAnonymous()"><a href="/login">Login</a></li>
+                <li sec:authorize="isAuthenticated()"><a href="/update/username">Change username</a></li>
                 <li sec:authorize="hasRole('USER')"><a href="/users">Users</a></li>
                 <li sec:authorize="hasRole('ADMIN')"><a href="/admins">Admins</a></li>
                 <li><a href="/about">About</a></li>

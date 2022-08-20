@@ -27,7 +27,7 @@ public class ShipService {
         this.modelMapper = modelMapper;
     }
 
-    public boolean addShip(CreateShipDTO shipDTO, UserDetails userDetails) {
+    public boolean addShip(CreateShipDTO shipDTO) {
 
         Optional<Ship> byName = this.shipRepository.findByName(shipDTO.getName());
         if (byName.isPresent()) {

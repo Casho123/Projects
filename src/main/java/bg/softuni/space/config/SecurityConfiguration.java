@@ -32,6 +32,7 @@ public class SecurityConfiguration {
                 .antMatchers("/login", "/register").anonymous()
                 .antMatchers("/add/*").authenticated()
                 .antMatchers("/travel/*").authenticated()
+                .antMatchers("/update/username").authenticated()
                 .antMatchers("/users").hasRole("USER")
                 .antMatchers("/admins").hasRole("ADMIN")
                 .antMatchers("/add/ship").hasAnyRole("USER", "ADMIN")
