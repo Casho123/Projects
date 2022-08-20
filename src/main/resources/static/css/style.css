@@ -918,6 +918,7 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 0 5px #999;
 }
 
+
 .brand-title {
     font-size: 1.5rem;
     margin: .5rem;
@@ -1020,5 +1021,12 @@ h1, h2, h3, h4, h5, h6 {
 .navbarrr button {
     display: flex;
     justify-content: center;
+
+}
+body#pvisualbody {
+     display: flex;
+     flex-direction: column;
+     background-size: cover;
+
 
 }
